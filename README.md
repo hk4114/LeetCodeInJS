@@ -17,6 +17,11 @@
 3. [二叉树的前序遍历](./src/144.Binary%20Tree%20Preorder%20Traversal.js)
 4. [二叉树的最大深度](src/104.Maximum%20Depth%20of%20Binary%20Tree.js)
 
+
+## 其他
+1. [不均匀硬币产生等概率](src/random.js)
+
+
 ```js
 // 交换数组
 function swipe(arr) {
