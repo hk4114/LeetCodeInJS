@@ -24,17 +24,43 @@
 
 ```js
 // 交换数组
+// function swipe(arr) {
+//   let r = [];
+//   let cur = null;
+//   for(let i=0;i<=arr.length;i++) {
+//     if((i+1)%2===0) {
+//       r.push(arr[i],cur)
+//     }else {
+//       cur = arr[i]
+//     }
+//   }
+//   return r
+// }
 function swipe(arr) {
-  let r = [];
-  let cur = null;
   for(let i=0;i<=arr.length;i++) {
     if((i+1)%2===0) {
-      r.push(arr[i],cur)
-    }else {
-      cur = arr[i]
+      [arr[i-1],arr[i]] = [arr[i], arr[i-1]]
     }
   }
-  return r
+  return arr
+}
+
+// 统计页面标签，并取最多的三个标签
+function sumTag() {
+   const nodeList = document.getElementsByTagName("*");
+   const nodes = [...nodeList].map(node => node.nodeName);
+   return nodes.reduce((pre,next)=>{
+      if(pre[next]) {
+         pre[next] += 1
+      }else {
+         pre[next] = 1
+      }
+      return pre
+   },{})
+}
+
+function getTop() {
+   return Object.entries(sumTag()).sort((a,b)=>b[1]-a[1]).slice(0,3)
 }
 ```
 
