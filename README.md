@@ -16,7 +16,8 @@
 2. [相同的树](./src/100.Same%20Tree.js)
 3. [二叉树的前序遍历](./src/144.Binary%20Tree%20Preorder%20Traversal.js)
 4. [二叉树的最大深度](src/104.Maximum%20Depth%20of%20Binary%20Tree.js)
-
+5. [二叉搜索树的最近公共祖先](src/235.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.js)
+6. [二叉树的最近公共祖先](src/236.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree.js)
 
 ## 其他
 1. [不均匀硬币产生等概率](src/random.js)
