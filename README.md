@@ -19,6 +19,10 @@
 5. [二叉搜索树的最近公共祖先](src/235.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.js)
 6. [二叉树的最近公共祖先](src/236.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree.js)
 
+## 二分法
+1. [pow](./src/50.pow.js)
+2. [x的平方根](./src/69.sqrt(x).js)
+
 ## 其他
 1. [不均匀硬币产生等概率](src/random.js)
 
