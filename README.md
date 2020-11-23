@@ -23,6 +23,10 @@
 1. [pow](./src/50.pow.js)
 2. [x的平方根](./src/69.sqrt(x).js)
 
+## 回溯
+1. [全排列](./src/46.Permutations.js)
+2. [单词搜索](./src/79.Word%20Search.js)
+
 ## 其他
 1. [不均匀硬币产生等概率](src/random.js)
 
