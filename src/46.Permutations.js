@@ -17,3 +17,22 @@ function backtrack(list, temp=[], nums) {
         temp.pop()
     }
 }
+
+// ------------- other -------------
+function permute(nums) {
+    let list = [];
+    const backtrack = path => {
+        if(path.length === nums.length) {
+            list.push(path)
+            return;
+        }
+        nums.forEach(item => {
+            if(path.includes(item)) {
+                return;
+            }
+            backtrack(path.concat(item))
+        })
+    }
+    backtrack([])
+    return list;
+}
