@@ -1,6 +1,8 @@
 # 数据结构
 ## 数组
 1. [排序](./src/912.sort-an-array.js)
+2. [盛最多水的容器](./src/11.container-with-most-water.js)
+3. [删除排序数组中的重复项](./src/26.remove-duplicates-from-sorted-array.js)
 
 ## 队列和栈
 1. [两数之和](./src/01.Two_Sum.js)
@@ -30,6 +32,7 @@
 1. [全排列](./src/46.Permutations.js)
 2. [单词搜索](./src/79.Word%20Search.js)
 3. [N皇后](./src/51.n-queens.js)
+4. [解数独](./src/37.sudoku-solver.js)
 
 ## 其他
 1. [不均匀硬币产生等概率](./src/others/random.js)
