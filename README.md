@@ -34,6 +34,15 @@
 3. [N皇后](./src/51.n-queens.js)
 4. [解数独](./src/37.sudoku-solver.js)
 
+## 动态规划
+1. [N皇后](./src/51.n-queens.js)
+2. [三角形最小路径和](./src/120.triangle.js)
+3. [零钱兑换](./src/322.coin-change.js)
+
+## 双指针
+1. [三数之和](./src/15.3sum.js)
+
+
 ## 其他
 1. [不均匀硬币产生等概率](./src/others/random.js)
 2. [链表](./src/others/LinkNode.js)
