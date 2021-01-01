@@ -1,14 +1,18 @@
 # 数据结构
 ## 数组
 1. [排序](./src/912.sort-an-array.js)
-2. [盛最多水的容器](./src/11.container-with-most-water.js)
-3. [删除排序数组中的重复项](./src/26.remove-duplicates-from-sorted-array.js)
+2. [整数反转](./src/07.reverse-integer.js)
+3. [盛最多水的容器](./src/11.container-with-most-water.js)
+4. [删除排序数组中的重复项](./src/26.remove-duplicates-from-sorted-array.js)
 
 ## 队列和栈
 1. [两数之和](./src/01.Two_Sum.js)
-2. [斐波那契](./src/509.Fibonacci_Number.js)
-3. [有效括号](./src/20.Valid_Parentheses.js)
-4. [简化路径](./src/71.Simplify_Path.js)
+2. [整数反转](./src/07.reverse-integer.js)
+3. [回文数](./src/09.palindrome-number.js)
+4. [罗马数字转整数](./src/13.roman-to-integer.js)
+5. [有效括号](./src/20.Valid_Parentheses.js)
+6. [简化路径](./src/71.Simplify_Path.js)
+7. [斐波那契](./src/509.Fibonacci_Number.js)
 
 ## 链表
 1. [移除链表元素](./src/203.Remove_Linked_List_Elements.js)
