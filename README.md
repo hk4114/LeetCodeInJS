@@ -53,3 +53,4 @@
 3. [交换数组相邻项](./src/others/swipe-arrray.js)
 4. [统计页面标签，并取最多的三个标签](./src/others/getViewElement.js)
 5. [获取数组最接近平均数的数字](./src/others/getAvaABSItem.js)
+6. [数组旋转](./src/others/rotateArray.js)
