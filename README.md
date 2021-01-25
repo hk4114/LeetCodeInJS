@@ -44,10 +44,11 @@
 3. [零钱兑换](./src/322.coin-change.js)
 
 ## 双指针
+1. [二分查找](./src/704.binary-search.js)
 1. [三数之和](./src/15.3sum.js)
 
 
-## 其他
+## General Coding
 1. [不均匀硬币产生等概率](./src/others/random.js)
 2. [链表](./src/others/LinkNode.js)
 3. [交换数组相邻项](./src/others/swipe-arrray.js)
