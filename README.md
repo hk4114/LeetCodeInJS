@@ -4,6 +4,7 @@
 2. [整数反转](./src/07.reverse-integer.js)
 3. [盛最多水的容器](./src/11.container-with-most-water.js)
 4. [删除排序数组中的重复项](./src/26.remove-duplicates-from-sorted-array.js)
+5. [多数元素](./src/169.Majority%20Element.js)
 
 ## 队列和栈
 1. [两数之和](./src/01.Two_Sum.js)
@@ -45,7 +46,7 @@
 
 ## 双指针
 1. [二分查找](./src/704.binary-search.js)
-1. [三数之和](./src/15.3sum.js)
+2. [三数之和](./src/15.3sum.js)
 
 
 ## General Coding
