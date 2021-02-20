@@ -14,8 +14,9 @@
 3. [环形链表1](./src/141.Linked%20List%20Cycle.js)
 4. [环形链表2](./src/142.Linked%20List%20Cycle%20II.js)
 5. [反转链表](./src/206.Reverse%20Linked%20List.js)
-6. to do [合并k个排序链表]
-7. to do 实现单链表、循环链表、双向链表，支持增删操作(删除链表倒数第 n 个结点)
+6. [两两交换链表中的节点](./src/24.swap-nodes-in-pairs.js)
+7. to do [合并k个排序链表]
+8. to do 实现单链表、循环链表、双向链表，支持增删操作(删除链表倒数第 n 个结点)
 
 ## 队列和栈
 1. [两数之和](./src/01.Two_Sum.js)
