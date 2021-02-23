@@ -43,18 +43,29 @@ var sortArray = function(nums) {
 };
 
 // 快排
-var sortArray = function(nums) {
-    if( nums.length <= 1 ) return nums
-    let left = []
-    let right = []
-    let pivotIndex  = Math.floor(nums.length / 2)
-    let pivotValue =  nums.splice(pivotIndex,1)[0]
-    for(let i = 0; i < nums.length; i++ ){
-        if(nums[i] > pivotValue){
-            right.push(nums[i])
-        }else{
-            left.push(nums[i])
-        }
+function qSort(compare) {
+    var swap = (p1, p2) => {
+        var tmp = this[p1];
+        this[p1] = this[p2];
+        this[p2] = tmp; 
     }
-    return sortArray(left).concat(pivotValue,sortArray(right))
-};
+    var sortRange = (start, end) => {
+        var midValue = this[start];
+        var p1 = start, p2 = end - 1;
+        while(p1 < p2) {
+            swap(p1, p1 + 1);
+            while(compare(this[p1], midValue) <= 0 && p1 < p2) {
+                swap(p1, p2--);
+            }
+            p1 ++;
+        }
+        if(start < p1 - 1) 
+            sortRange(start, p1);
+        if(p1 < end - 1) 
+            sortRange(p1, end);
+        
+    }
+    sortRange(0, this.length);
+    return this;
+}
+console.log(qSort.call([6, 1, 2, 7, 9, 3, 4, 5, 10, 8], (a, b) => b - a))
