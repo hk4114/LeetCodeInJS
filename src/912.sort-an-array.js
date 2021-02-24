@@ -43,29 +43,52 @@ var sortArray = function(nums) {
 };
 
 // 快排
-function qSort(compare) {
-    var swap = (p1, p2) => {
-        var tmp = this[p1];
-        this[p1] = this[p2];
-        this[p2] = tmp; 
-    }
-    var sortRange = (start, end) => {
-        var midValue = this[start];
-        var p1 = start, p2 = end - 1;
-        while(p1 < p2) {
-            swap(p1, p1 + 1);
-            while(compare(this[p1], midValue) <= 0 && p1 < p2) {
-                swap(p1, p2--);
+var sortArray = function(arr) {
+    const swap = (p1, p2) => [arr[p1], arr[p2]] = [arr[p2], arr[p1]];
+    const sortRange = (start, end) => {
+        let pivot = arr[start]
+        let left = start;
+        let right = end-1;
+        while(left < right) {
+            swap(left, left+1)
+            while(pivot < arr[left]  && left < right){
+                swap(left, right--);
             }
-            p1 ++;
+            left++
         }
-        if(start < p1 - 1) 
-            sortRange(start, p1);
-        if(p1 < end - 1) 
-            sortRange(p1, end);
-        
+        if(start < left-1) {
+            sortRange(start, left)
+        }
+        if(left < end-1) {
+            sortRange(left, end)
+        }
     }
-    sortRange(0, this.length);
-    return this;
-}
-console.log(qSort.call([6, 1, 2, 7, 9, 3, 4, 5, 10, 8], (a, b) => b - a))
+    sortRange(0, arr.length);
+    return arr;
+};
+
+var sortArray = function(nums) {
+    function quick (f, t) {
+        if (f >= t) {
+            return
+        }
+        let i = f
+        let j = t
+        let cur = nums[f]
+        while (i < j) {
+            while (nums[j] >= cur && i < j) {
+                j --
+            }
+            nums[i] = nums[j]
+            while (nums[i] <= cur && i < j) {
+                i ++
+            }
+            nums[j] = nums[i]
+        }
+        nums[i] = cur
+        quick(f, i - 1)
+        quick(i + 1, t)
+    }
+    quick(0, nums.length - 1)
+    return nums
+};
