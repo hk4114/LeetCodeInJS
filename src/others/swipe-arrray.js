@@ -19,3 +19,11 @@ function swipe(arr) {
   }
   return arr
 }
+
+function swap(arr) {
+  const l = arr.length;
+  for(let i=0,j=1;i<l,j<l;i+=2,j+=2) {
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
