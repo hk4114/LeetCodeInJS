@@ -26,6 +26,8 @@
 5. [有效括号](./src/20.Valid_Parentheses.js)
 6. [简化路径](./src/71.Simplify_Path.js)
 7. [斐波那契](./src/509.Fibonacci_Number.js)
+8. [用队列实现栈](./src/225.implement-stack-using-queues.js)
+9. [用栈实现队列](./src/232.implement-queue-using-stacks.js)
 
 ## 二叉树
 1. [反转二叉树](./src/226.Invert%20Binary%20Tree.js)
