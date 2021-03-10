@@ -29,6 +29,8 @@
 8. [用队列实现栈](./src/225.implement-stack-using-queues.js)
 9. [用栈实现队列](./src/232.implement-queue-using-stacks.js)
 10. [数据流中的第 K 大元素](./src/703.kth-largest-element-in-a-stream.js)
+11. [滑动窗口的最大值](./src/239.sliding-window-maximum.js)
+12. [有效的字母异位词](./src/242.valid-anagram.js)
 
 ## 二叉树
 1. [反转二叉树](./src/226.Invert%20Binary%20Tree.js)
