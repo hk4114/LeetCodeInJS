@@ -2,19 +2,19 @@
  * @param {number[]} nums
  * @return {number}
  */
-var majorityElement = function(nums) {
+var majorityElement = function (nums) {
     let cache = {};
-    for(let i=0;i<nums.length;i++) {
-        if(cache[nums[i]]) {
+    for (let i = 0; i < nums.length; i++) {
+        if (cache[nums[i]]) {
             cache[nums[i]] += 1;
-        }else {
+        } else {
             cache[nums[i]] = 1
         }
     }
     let max = 0;
     let r = 0;
-    for(let i of Object.keys(cache)) {
-        if(cache[i]>max) {
+    for (let i of Object.keys(cache)) {
+        if (cache[i] > max) {
             max = cache[i];
             r = i
         }
@@ -22,17 +22,17 @@ var majorityElement = function(nums) {
     return r
 };
 // the best practice Boyer-Moore
-var majorityElement = function(nums) {
+var majorityElement = function (nums) {
     let count = 0;
     let majority = nums[0];
-    for(let i = 1; i < nums.length; i++) {
+    for (let i = 1; i < nums.length; i++) {
         if (count === 0) {
             majority = nums[i];
         }
         if (nums[i] === majority) {
-            count ++;
+            count++;
         } else {
-            count --;
+            count--;
         }
     }
     return majority;

@@ -1,5 +1,5 @@
-function before(root,arr=[]) {
-    if(root) {
+function before(root, arr = []) {
+    if (root) {
         arr.push(root.val);
         before(root.left, arr)
         before(root.right, arr)
@@ -11,8 +11,8 @@ function before02(root) {
     let cur = root;
     let stack = [];
     let cache = [];
-    while(stack.length && cur) {
-        while(cur) {
+    while (stack.length && cur) {
+        while (cur) {
             cache.push(cur.val);
             stack.pop(cur);
             cur = cur.left

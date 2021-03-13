@@ -1,8 +1,8 @@
 function isCycle(head) {
-    while(head) {
-        if(head.isChecked) {
+    while (head) {
+        if (head.isChecked) {
             return true
-        }else {
+        } else {
             head.isChecked = true
         }
         head = head.next

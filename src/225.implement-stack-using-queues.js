@@ -1,7 +1,7 @@
 /**
  * Initialize your data structure here.
  */
-var MyStack = function() {
+var MyStack = function () {
     this.length = 0
     this.input = []
     this.output = []
@@ -12,13 +12,13 @@ var MyStack = function() {
  * @param {number} x
  * @return {void}
  */
-MyStack.prototype.push = function(x) {
+MyStack.prototype.push = function (x) {
     this.length += 1
     this.input.push(x)
 };
 
-MyStack.prototype.checkOut = function() {
-    while(this.input.length) {
+MyStack.prototype.checkOut = function () {
+    while (this.input.length) {
         const n = this.input.shift();
         this.output.unshift(n)
     }
@@ -28,7 +28,7 @@ MyStack.prototype.checkOut = function() {
  * Removes the element on top of the stack and returns that element.
  * @return {number}
  */
-MyStack.prototype.pop = function() {
+MyStack.prototype.pop = function () {
     this.checkOut()
     this.length -= 1
     return this.output.shift()
@@ -38,7 +38,7 @@ MyStack.prototype.pop = function() {
  * Get the top element.
  * @return {number}
  */
-MyStack.prototype.top = function() {
+MyStack.prototype.top = function () {
     this.checkOut()
     return this.output[0]
 };
@@ -47,7 +47,7 @@ MyStack.prototype.top = function() {
  * Returns whether the stack is empty.
  * @return {boolean}
  */
-MyStack.prototype.empty = function() {
+MyStack.prototype.empty = function () {
     return !this.length
 };
 

@@ -31,13 +31,13 @@ var maxSlidingWindow = function (nums, k) {
   }
   return res;
 };
-  
+
 
 // 双端队列
-var maxSlidingWindow = function(nums, k) {
+var maxSlidingWindow = function (nums, k) {
   const n = nums.length
-  if (n < 2 || k === 1) return nums 
-  
+  if (n < 2 || k === 1) return nums
+
   const ans = new Array(n - k + 1)
   const q = []
   for (let i = 0; i < n; i++) {
