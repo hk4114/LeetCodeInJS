@@ -2,9 +2,9 @@
  * Initialize your data structure here.
  */
 var MyStack = function () {
-    this.length = 0
-    this.input = []
-    this.output = []
+  this.length = 0
+  this.input = []
+  this.output = []
 };
 
 /**
@@ -13,15 +13,15 @@ var MyStack = function () {
  * @return {void}
  */
 MyStack.prototype.push = function (x) {
-    this.length += 1
-    this.input.push(x)
+  this.length += 1
+  this.input.push(x)
 };
 
 MyStack.prototype.checkOut = function () {
-    while (this.input.length) {
-        const n = this.input.shift();
-        this.output.unshift(n)
-    }
+  while (this.input.length) {
+    const n = this.input.shift();
+    this.output.unshift(n)
+  }
 }
 
 /**
@@ -29,9 +29,9 @@ MyStack.prototype.checkOut = function () {
  * @return {number}
  */
 MyStack.prototype.pop = function () {
-    this.checkOut()
-    this.length -= 1
-    return this.output.shift()
+  this.checkOut()
+  this.length -= 1
+  return this.output.shift()
 };
 
 /**
@@ -39,8 +39,8 @@ MyStack.prototype.pop = function () {
  * @return {number}
  */
 MyStack.prototype.top = function () {
-    this.checkOut()
-    return this.output[0]
+  this.checkOut()
+  return this.output[0]
 };
 
 /**
@@ -48,7 +48,7 @@ MyStack.prototype.top = function () {
  * @return {boolean}
  */
 MyStack.prototype.empty = function () {
-    return !this.length
+  return !this.length
 };
 
 /**

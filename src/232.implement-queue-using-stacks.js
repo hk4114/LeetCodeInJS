@@ -2,9 +2,9 @@
  * Initialize your data structure here.
  */
 var MyQueue = function () {
-    this.length = 0
-    this.input = []
-    this.output = []
+  this.length = 0
+  this.input = []
+  this.output = []
 };
 
 /**
@@ -13,15 +13,15 @@ var MyQueue = function () {
  * @return {void}
  */
 MyQueue.prototype.push = function (x) {
-    this.input.push(x)
-    this.length += 1
+  this.input.push(x)
+  this.length += 1
 };
 
 MyQueue.prototype.checkOut = function () {
-    while (this.input.length) {
-        const n = this.input.shift()
-        this.output.push(n)
-    }
+  while (this.input.length) {
+    const n = this.input.shift()
+    this.output.push(n)
+  }
 }
 
 /**
@@ -29,9 +29,9 @@ MyQueue.prototype.checkOut = function () {
  * @return {number}
  */
 MyQueue.prototype.pop = function () {
-    this.checkOut()
-    this.length -= 1
-    return this.output.shift()
+  this.checkOut()
+  this.length -= 1
+  return this.output.shift()
 
 };
 
@@ -40,8 +40,8 @@ MyQueue.prototype.pop = function () {
  * @return {number}
  */
 MyQueue.prototype.peek = function () {
-    this.checkOut()
-    return this.output[0]
+  this.checkOut()
+  return this.output[0]
 };
 
 /**
@@ -49,7 +49,7 @@ MyQueue.prototype.peek = function () {
  * @return {boolean}
  */
 MyQueue.prototype.empty = function () {
-    return !this.length
+  return !this.length
 };
 
 /**

@@ -3,39 +3,39 @@
  * @return {number}
  */
 var majorityElement = function (nums) {
-    let cache = {};
-    for (let i = 0; i < nums.length; i++) {
-        if (cache[nums[i]]) {
-            cache[nums[i]] += 1;
-        } else {
-            cache[nums[i]] = 1
-        }
+  let cache = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (cache[nums[i]]) {
+      cache[nums[i]] += 1;
+    } else {
+      cache[nums[i]] = 1
     }
-    let max = 0;
-    let r = 0;
-    for (let i of Object.keys(cache)) {
-        if (cache[i] > max) {
-            max = cache[i];
-            r = i
-        }
+  }
+  let max = 0;
+  let r = 0;
+  for (let i of Object.keys(cache)) {
+    if (cache[i] > max) {
+      max = cache[i];
+      r = i
     }
-    return r
+  }
+  return r
 };
 // the best practice Boyer-Moore
 var majorityElement = function (nums) {
-    let count = 0;
-    let majority = nums[0];
-    for (let i = 1; i < nums.length; i++) {
-        if (count === 0) {
-            majority = nums[i];
-        }
-        if (nums[i] === majority) {
-            count++;
-        } else {
-            count--;
-        }
+  let count = 0;
+  let majority = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    if (count === 0) {
+      majority = nums[i];
     }
-    return majority;
+    if (nums[i] === majority) {
+      count++;
+    } else {
+      count--;
+    }
+  }
+  return majority;
 };
 // Boyer-Moore 算法的本质和方法四中的分治十分类似。我们首先给出 Boyer-Moore 算法的详细步骤：
 

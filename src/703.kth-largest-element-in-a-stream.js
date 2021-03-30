@@ -3,8 +3,8 @@
  * @param {number[]} nums
  */
 var KthLargest = function (k, nums) {
-    this.k = k;
-    this.nums = nums
+  this.k = k;
+  this.nums = nums
 };
 
 /** 
@@ -12,8 +12,8 @@ var KthLargest = function (k, nums) {
  * @return {number}
  */
 KthLargest.prototype.add = function (val) {
-    this.nums.push(val)
-    return this.nums.sort((a, b) => b - a)[this.k - 1]
+  this.nums.push(val)
+  return this.nums.sort((a, b) => b - a)[this.k - 1]
 };
 
 /**

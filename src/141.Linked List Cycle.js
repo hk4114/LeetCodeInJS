@@ -1,11 +1,11 @@
 function isCycle(head) {
-    while (head) {
-        if (head.isChecked) {
-            return true
-        } else {
-            head.isChecked = true
-        }
-        head = head.next
+  while (head) {
+    if (head.isChecked) {
+      return true
+    } else {
+      head.isChecked = true
     }
-    return false
+    head = head.next
+  }
+  return false
 }
