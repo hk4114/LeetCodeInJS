@@ -1,7 +1,6 @@
-function reverseTree(root) {
-  if (root !== null) {
-    return root
+function invertTree(root) {
+  if (root) {
+    [root.left, root.right] = [invertTree(root.right), invertTree(root.left)]
   }
-  [root.left, root.right] = [reverseTree(root.right), reverseTree(root.left)]
   return root
 }
