@@ -1,12 +1,12 @@
 # 数据结构
 ## 数组
 1. [数组排序](./src/912.sort-an-array.js)
-2. to do [实现两个有序数组合并为一个有序数组]
-3. to do [求缺失的第一个正数]
+2. [合并两个有序数组](./src/88.merge-sorted-array.js)
+3. [求缺失的第一个正数](./src/41.first-missing-positive.js)
 4. [三数之和](./src/15.3sum.js)
 5. [多数元素](./src/169.Majority%20Element.js)
 6. [盛最多水的容器](./src/11.container-with-most-water.js)
-7.  [删除排序数组中的重复项](./src/26.remove-duplicates-from-sorted-array.js)
+7. [删除排序数组中的重复项](./src/26.remove-duplicates-from-sorted-array.js)
 
 ## 链表
 1. [链表的增删改查](./src/others/LinkNode.js) 

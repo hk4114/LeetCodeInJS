@@ -48,3 +48,18 @@ var majorityElement = function (nums) {
 // 如果 x 与 candidate 不等，那么计数器 count 的值减少 1。
 
 // 在遍历完成后，candidate 即为整个数组的众数。
+
+
+function majorityElement(arr) {
+  if(!arr.length) {
+    return null
+  }
+  return Object.entries(arr.reduce((pre,next)=>{
+    if(pre[next]) {
+      pre[next] += 1
+    }else {
+      pre[next] = 1
+    }
+    return pre
+  },{})).sort((a,b)=> b[1]-a[1])[0][0]
+}
