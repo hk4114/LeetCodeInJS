@@ -29,110 +29,69 @@ var sortArray = function (nums) {
   return nums
 };
 
-
 // 快排
-var sortArray = function (arr) {
-  const swap = (p1, p2) => [arr[p1], arr[p2]] = [arr[p2], arr[p1]];
-  const sortRange = (start, end) => {
-    let pivot = arr[start]
-    let left = start;
-    let right = end - 1;
-    while (left < right) {
-      swap(left, left + 1)
-      while (pivot < arr[left] && left < right) {
-        swap(left, right--);
-      }
-      left++
-    }
-    if (start < left - 1) {
-      sortRange(start, left)
-    }
-    if (left < end - 1) {
-      sortRange(left, end)
-    }
-  }
-  sortRange(0, arr.length);
-  return arr;
-};
-
 var sortArray = function (nums) {
-  function quick(f, t) {
-    if (f >= t) {
+  const quickSort = (start, end) => {
+    if (start >= end) {
       return
     }
-    let i = f
-    let j = t
-    let cur = nums[f]
-    while (i < j) {
-      while (nums[j] >= cur && i < j) {
-        j--
+    let left = start, right = end, p = nums[start];
+    while (left < right) {
+      while (left < right && nums[right] >= p) {
+        right--
       }
-      nums[i] = nums[j]
-      while (nums[i] <= cur && i < j) {
-        i++
+      nums[left] = nums[right];
+      while (left < right && nums[left] <= p) {
+        left++
       }
-      nums[j] = nums[i]
+      nums[right] = nums[left]
     }
-    nums[i] = cur
-    quick(f, i - 1)
-    quick(i + 1, t)
+    nums[left] = p;
+    quickSort(start, left - 1);
+    quickSort(left + 1, end)
   }
-  quick(0, nums.length - 1)
+  quickSort(0, nums.length - 1)
   return nums
-};
+}
 
-const quickSort = arr => {
-  const a = [...arr];
-  if (a.length < 2) return a;
-  const pivotIndex = Math.floor(arr.length / 2);
-  const pivot = a[pivotIndex];
-  const [lo, hi] = a.reduce(
-    (acc, val, i) => {
-      if (val < pivot || (val === pivot && i != pivotIndex)) {
-        acc[0].push(val);
-      } else if (val > pivot) {
-        acc[1].push(val);
-      }
-      return acc;
-    },
-    [[], []]
-  );
-  return [...quickSort(lo), pivot, ...quickSort(hi)];
-};
-
-
-// [插入](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
-function insertionSort(originalArray) {
-  const array = [...originalArray];
-  // Go through all array elements...
-  for (let i = 1; i < array.length; i += 1) {
-    let currentIndex = i;
-
-    // Call visiting callback.
-    this.callbacks.visitingCallback(array[i]);
-
-    // Check if previous element is greater than current element.
-    // If so, swap the two elements.
-    while (
-      array[currentIndex - 1] !== undefined
-      && this.comparator.lessThan(array[currentIndex], array[currentIndex - 1])
-    ) {
-      // Call visiting callback.
-      this.callbacks.visitingCallback(array[currentIndex - 1]);
-
-      // Swap the elements.
-      [
-        array[currentIndex - 1],
-        array[currentIndex],
-      ] = [
-          array[currentIndex],
-          array[currentIndex - 1],
-        ];
-
-      // Shift current index left.
-      currentIndex -= 1;
-    }
+// 归并排序
+var sortArray = function (nums) {
+  // If array is empty or consists of one element then return this array since it is sorted.
+  if (nums.length <= 1) {
+    return nums;
   }
+  // Split array on two halves.
+  const middleIndex = Math.floor(nums.length / 2);
+  const leftArray = nums.slice(0, middleIndex);
+  const rightArray = nums.slice(middleIndex, nums.length);
+  // Sort two halves of split array
+  const leftSortedArray = sortArray(leftArray);
+  const rightSortedArray = sortArray(rightArray);
+  // Merge two sorted arrays into one.
+  return mergeSort(leftSortedArray, rightSortedArray);
+};
 
-  return array;
+function mergeSort(leftArray, rightArray) {
+  const sortedArray = [];
+  // Use array pointers to exclude old elements after they have been added to the sorted array.
+  let leftIndex = 0;
+  let rightIndex = 0;
+  while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
+    let minElement = null;
+    // Find the minimum element between the left and right array.
+    if (leftArray[leftIndex] <= rightArray[rightIndex]) {
+      minElement = leftArray[leftIndex];
+      // Increment index pointer to the right
+      leftIndex += 1;
+    } else {
+      minElement = rightArray[rightIndex];
+      // Increment index pointer to the right
+      rightIndex += 1;
+    }
+    // Add the minimum element to the sorted array.
+    sortedArray.push(minElement);
+  }
+  // There will be elements remaining from either the left OR the right
+  // Concatenate the remaining elements into the sorted array
+  return sortedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
 }
