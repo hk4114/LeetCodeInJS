@@ -12,46 +12,66 @@ var sortArray = function (nums) {
 
 
 // 选择
-var sortArray = function (nums) {
-  const length = nums.length
-  let minIndex = 0
-  for (let i = 0; i < length - 1; i++) {
-    minIndex = i
-    for (let j = i; j < length; j++) {
-      if (nums[minIndex] > nums[j]) {
-        minIndex = j
+function sort(arr) {
+  const l = arr.length;
+  let min = null;
+  for (let i = 0; i < l; i++) {
+    min = i
+    for (let j = i + 1; j < l; j++) {
+      if (arr[min] > arr[j]) {
+        min = j
       }
     }
-    if (i !== minIndex) {
-      [nums[i], nums[minIndex]] = [nums[minIndex], nums[i]]
+    if (min !== i) {
+      [arr[i], arr[min]] = [arr[min], arr[i]]
     }
   }
-  return nums
-};
+  return arr
+}
+
+// 插入
+function sort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let cur = arr[i];
+    let j = i - 1;
+    // 查找插入的位置
+    for (; j >= 0; j--) {
+      if (arr[j] > cur) {
+        arr[j + 1] = arr[j] // 数据移动
+      } else {
+        break
+      }
+    }
+    arr[j + 1] = cur; // 插入数据
+  }
+  return arr
+}
 
 // 快排
-var sortArray = function (nums) {
+function sort(arr) {
   const quickSort = (start, end) => {
     if (start >= end) {
       return
     }
-    let left = start, right = end, p = nums[start];
+    let left = start;
+    let right = end;
+    const pv = arr[start];
     while (left < right) {
-      while (left < right && nums[right] >= p) {
+      while (left < right && arr[right] >= pv) {
         right--
       }
-      nums[left] = nums[right];
-      while (left < right && nums[left] <= p) {
+      arr[left] = arr[right]
+      while (left < right && arr[left] <= pv) {
         left++
       }
-      nums[right] = nums[left]
+      arr[right] = arr[left]
     }
-    nums[left] = p;
+    arr[left] = pv;
     quickSort(start, left - 1);
     quickSort(left + 1, end)
   }
-  quickSort(0, nums.length - 1)
-  return nums
+  quickSort(0, arr.length - 1)
+  return arr
 }
 
 // 归并排序
