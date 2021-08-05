@@ -31,18 +31,14 @@ function sort(arr) {
 
 // 插入
 function sort(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    let cur = arr[i];
-    let j = i - 1;
-    // 查找插入的位置
-    for (; j >= 0; j--) {
-      if (arr[j] > cur) {
-        arr[j + 1] = arr[j] // 数据移动
-      } else {
-        break
-      }
+  for (let i = 0; i < arr.length; i++) {
+    let p = i;
+    const tmp = arr[i];
+    while (p > 0 && arr[p - 1] > tmp) {
+      arr[p] = arr[p - 1]
+      p -= 1
     }
-    arr[j + 1] = cur; // 插入数据
+    arr[p] = tmp
   }
   return arr
 }
