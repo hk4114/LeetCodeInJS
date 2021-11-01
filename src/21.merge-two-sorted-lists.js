@@ -1,6 +1,3 @@
-// 作者：Alexer-660
-// 链接：https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/23-he-bing-kge-pai-xu-lian-biao-by-alexer-660/
-
 // 迭代
 export const mergeTwoLists = function (l1, l2) {
   const prehead = new ListNode(-1);

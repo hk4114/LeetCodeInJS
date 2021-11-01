@@ -1,5 +1,3 @@
-# 数据结构
-
 ## 数组
 1. [数组排序](./src/912.sort-an-array.js)
 2. [合并两个有序数组](./src/88.merge-sorted-array.js)
@@ -21,31 +19,19 @@
 9. [合并两个有序链表](./src/21.merge-two-sorted-lists.js)
 
 ## 栈
-1. todo 顺序栈
-2. todo 链式栈
-3. todo 最长有效的括号
-4. todo 逆波兰表达式求值
-5. [有效括号](./src/20.Valid_Parentheses.js)
-6. [简化路径](./src/71.Simplify_Path.js)
-7. [整数反转](./src/07.reverse-integer.js)
+1. [有效括号](./src/20.Valid_Parentheses.js)
+2. [简化路径](./src/71.Simplify_Path.js)
+3. [整数反转](./src/07.reverse-integer.js)
 
 ## 队列
-1. todo 顺序队列
-2. todo 链式队列
-3. todo 双端队列
-4. [滑动窗口的最大值](./src/239.sliding-window-maximum.js)
-5. [罗马数字转整数](./src/13.roman-to-integer.js)
+1. [滑动窗口的最大值](./src/239.sliding-window-maximum.js)
+2. [罗马数字转整数](./src/13.roman-to-integer.js)
 
 ## 递归
-1. todo 背包问题
-2. [全排列](./src/46.Permutations.js)
-3. [斐波那契](./src/509.Fibonacci_Number.js) todo 递归方法的优化
-4. [二叉树的前序遍历](./src/144.Binary%20Tree%20Preorder%20Traversal.js)
-5. [N皇后](./src/51.n-queens.js)
-
-## 排序
-1. [数组排序](./src/912.sort-an-array.js)
-[js 算法](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+1. [全排列](./src/46.Permutations.js)
+2. [斐波那契](./src/509.Fibonacci_Number.js) todo 递归方法的优化
+3. [二叉树的前序遍历](./src/144.Binary%20Tree%20Preorder%20Traversal.js)
+4. [N皇后](./src/51.n-queens.js)
 
 ## 二分查找
 1. [pow](./src/50.pow.js)
@@ -65,20 +51,12 @@
 3. [用栈实现队列](./src/232.implement-queue-using-stacks.js)
 4. [数据流中的第 K 大元素](./src/703.kth-largest-element-in-a-stream.js)
 5. [有效的字母异位词](./src/242.valid-anagram.js)
-
-## 回溯
-1. [单词搜索](./src/79.Word%20Search.js)
-2. [解数独](./src/37.sudoku-solver.js)
-
-## 动态规划
-1. [N皇后](./src/51.n-queens.js)
-2. [三角形最小路径和](./src/120.triangle.js)
-3. [零钱兑换](./src/322.coin-change.js)
-
-## 双指针
-1. [二分查找](./src/704.binary-search.js)
-2. [三数之和](./src/15.3sum.js)
-3. [回文数](./src/09.palindrome-number.js)
+6. [单词搜索](./src/79.Word%20Search.js)
+7. [解数独](./src/37.sudoku-solver.js)
+8. [三角形最小路径和](./src/120.triangle.js)
+9. [零钱兑换](./src/322.coin-change.js)
+10. [二分查找](./src/704.binary-search.js)
+11. [回文数](./src/09.palindrome-number.js)
 
 
 ## General Coding

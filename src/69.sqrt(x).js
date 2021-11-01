@@ -1,5 +1,4 @@
 var mySqrt = function (x) {
-  // https://juejin.im/post/6844903824050618381
   if (x < 2) return x
   let left = 1, mid, right = Math.floor(x / 2);
   while (left <= right) {
